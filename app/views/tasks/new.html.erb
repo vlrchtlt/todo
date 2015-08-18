@@ -1,0 +1,21 @@
+<h1>NEW TASK</h1>
+
+<!-- <form action="/tasks" method="post">
+  <label for="text">Task ?: </label>
+  <input type="text" name="task[text]" id="text">
+
+  <label for="status">Status: </label>
+  <input type="boolean" name="task[status]" id="status">
+
+  <input type="submit">
+</form> -->
+
+<%= form_for(@task) do |f| %>
+  <%= f.label :text %>
+  <%= f.text_field :text %>
+
+  <%= f.label :status %>
+  <%= f.check_box :status %>
+
+  <%= f.submit %>
+<% end %>

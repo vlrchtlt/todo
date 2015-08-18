@@ -1,0 +1,15 @@
+<h1>TODO</h1>
+<% @tasks.each do |t|%>
+  <% if t.status %>
+    <p>Fait</p>
+  <% else %>
+   <p>Pas fait</p>
+  <% end %>
+
+  <p>
+    <%= t.text %>
+  </p>
+  <%= link_to "view task", task_path(t) %>
+  <%= link_to "delete", task_path(t), method: :delete %>
+  <hr>
+<%end%>
